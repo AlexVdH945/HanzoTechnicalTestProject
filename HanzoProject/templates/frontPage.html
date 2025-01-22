@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Browser</title>
+</head>
+<body>
+    <div class="viewer">
+        <div ><h3>Welcome to the Viewer app for the Lorem-Ipsum.pdf file</h3></div>
+        <div >
+            <a class="link" href="{% static 'lorem-ipsum.pdf' %}" target="_blank">
+                <button class='custom_button' id='view' >View PDF</button>
+            </a>
+
+            <a class="link" href="{% static 'lorem-ipsum.pdf' %}" download="example.pdf">
+                <button class='custom_button' id='download'> Download PDF </button>
+            </a>
+        </div>
+    </div>
+</body>
+
+<style>
+    .viewer{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -200px;
+    }
+
+    .link{
+        text-decoration: none !important;
+    }
+    .custom_button{
+        width: 200px;
+        height: 200px;
+
+    }
+</style>
+</html>
